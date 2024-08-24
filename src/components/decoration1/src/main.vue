@@ -4,10 +4,11 @@
 
       <template
         v-for="(point, i) in points"
+        :key="i"
       >
         <rect
           v-if="Math.random() > 0.6"
-          :key="i"
+          
           :fill="mergedColor[0]"
           :x="point[0] - halfPointSideLength"
           :y="point[1] - halfPointSideLength"
